@@ -119,10 +119,10 @@ function App() {
           <div className="dropdown">
             Categories
             <div className="dropdown-content">
-              <p>All</p>
-              <p>It</p>
-              <p>manegment</p>
-              <p>call center</p>
+              <p onClick={() => { fetchData() }}>All</p>
+              <p onClick={() => { searchByCategory('It') }}>It</p>
+              <p onClick={() => { searchByCategory('management') }}>Manegment</p>
+              <p onClick={() => { searchByCategory('call center') }}>Call center</p>
             </div>
           </div>
         </span>
@@ -130,10 +130,9 @@ function App() {
           <div className="dropdown">
             Job By City
             <div className="dropdown-content">
-              <p>All</p>
-              <p>Sousse</p>
-              <p>Tunis</p>
-              <p>Sfax</p>
+              <p onClick={() => { searchByCity('Sousse') }}>Sousse</p>
+              <p onClick={()=>{searchByCity('Tunis')}}>Tunis</p>
+              <p onClick={()=>{searchByCity('Sfax')}}>Sfax</p>
             </div>
           </div>
         </span>
