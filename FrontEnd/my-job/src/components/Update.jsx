@@ -11,7 +11,7 @@ const Update = (props) => {
 
     return (
         <div className="blog-list-item">
-            <div>
+            <form  className="New-Post-Form">
                 <h1> Update  Job</h1>
                 <input type="text" placeholder="Your Name" value={name}
                     onChange={(e) => { setName(e.target.value) }}
@@ -38,7 +38,7 @@ const Update = (props) => {
                          email: email
                      },props.job.id)
                 }}> Update Job</button>
-            </div>
+            </form>
 
 
         </div>

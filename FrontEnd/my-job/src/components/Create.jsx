@@ -10,7 +10,7 @@ const Create = (props) => {
 
     return (
         <div className="blog-list-item">
-            <div>
+            <form  className="New-Post-Form">
                 <h1> Create New Job</h1>
                 <input type="text" placeholder="Your Name" value={name}
                     onChange={(e) => { setName(e.target.value) }}
@@ -37,7 +37,7 @@ const Create = (props) => {
                          email: email
                      })
                 }}>Add Job</button>
-            </div>
+            </form>
 
 
         </div>
