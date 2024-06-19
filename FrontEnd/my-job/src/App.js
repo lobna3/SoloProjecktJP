@@ -1,24 +1,38 @@
 import React  ,{useState,useEffect}from 'react'
 import './App.css';
 import Search from './components/Search.jsx';
-
+import AllList from './components/AllList.jsx';
+import axios from 'axios';
 
 function App() {
 
   const [view, setView] = useState("allJobs")
   const [data, setData] = useState([])
+  const [refetsch, setRefetsch] = useState(false)
+
+  const fetchData = () => {
+    axios.get('http://127.0.0.1:5000/api/jobs').then((response) => {
+      console.log(response.data)
+      setData(response.data)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+  useEffect(() => {
+    fetchData()
+  }, [refetsch])
+  
 
   const changeView = (option) => {
     setView(option)
   }
   const renderView = () => {
     if (view === "allJobs") {
-      return <div><h1>AllJobs</h1></div>
+      return <AllList jobs={data}/>
     }
     if (view === "createJob") {
       return <div><h1>Create New Job</h1></div>
     }
-
   }
 
   return (

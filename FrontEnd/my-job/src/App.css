@@ -112,3 +112,53 @@
   display: block;
 }
 
+.blog-list-item {
+  width: 590px;
+  min-height: 250px;
+  margin: auto;
+  margin-top: 10px;
+  border: 1px solid #77777769;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  padding: 20px 60px;
+  box-shadow: 0 0 1em #80808066;
+}
+
+.blog-list-item-image {
+  float: left;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  margin-right: 20px;
+  margin-bottom: 5%;
+}
+
+.blog-list-item-title {
+  font-size: 35px;
+  font-family: "Francois One";
+  margin-bottom: 10px;
+}
+
+.blog-list-item-lede {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.blog-list-item-lede img {
+  width: 100%;
+}
+
+.blog-list-item-byline {
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  color: #777777;
+}
+
+.blog-list-item-byline-author {
+  font-weight: bolder;
+}
+
+.blog {
+  padding: 0px 10% 0px 10%;
+}
+
