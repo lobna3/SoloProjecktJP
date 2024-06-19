@@ -5,6 +5,7 @@ import AllList from './components/AllList.jsx';
 import axios from 'axios';
 import OneJob from './components/OneJob.jsx';
 import Create from './components/Create.jsx';
+import Update from './components/Update.jsx';
 
 function App() {
 
@@ -32,6 +33,17 @@ function App() {
     })
   }
 
+  const updateData = (body, id) => {
+    axios.put(`http://127.0.0.1:5000/api/jobs/${id}`, body).then((response) => {
+      console.log(response.data)
+      setRefetsch(!refetsch)
+      alert("Jobs updated with succsses")
+      setView("allJobs")
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+
   useEffect(() => {
     fetchData()
   }, [refetsch])
@@ -53,7 +65,7 @@ function App() {
       return <OneJob job={job}/>
     }
     if (view === "updateJob") {
-      return <div>update</div>
+      return <Update job={job} updateP={updateData}/>
     }
   }
 

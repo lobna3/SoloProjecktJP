@@ -21,7 +21,7 @@ const AllList = (props) => {
                     </div>
                     <div className="blog-list-item-lede">
                         <button onClick={()=>{props.change("oneJob",ele)}}>More Details</button>
-                        <button>Update</button>
+                        <button onClick={()=>{props.change("updateJob",ele)}}>Update</button>
                         <button>Delete</button>
 
                     </div>
