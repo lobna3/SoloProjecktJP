@@ -22,7 +22,7 @@ function App() {
       console.log(error)
     })
   } 
-  
+
   const postData = (body) => {
     axios.post('http://127.0.0.1:5000/api/jobs', body).then((response) => {
       console.log(response.data)
@@ -122,7 +122,7 @@ function App() {
             <div className="dropdown-content">
               <p onClick={() => { changeView("allJobs") }}>All</p>
               <p onClick={() => { searchByCategory('It') }}>It</p>
-              <p onClick={() => { searchByCategory('management') }}>Managment</p>
+              <p onClick={() => { searchByCategory('management') }}>Management</p>
               <p onClick={() => { searchByCategory('call center') }}>Call center</p>
             </div>
           </div>
