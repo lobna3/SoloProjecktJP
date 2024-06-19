@@ -9,7 +9,7 @@ const AllList = (props) => {
                 <div className="blog-list-item" key={i}>
                     <div className="blog-list-item-title">{ele.name}</div>
                     <div className="blog-list-item-byline">
-                        <span className="blog-list-item-byline-author"> {ele.descreption} </span>
+                        <span className="blog-list-item-byline-author"> {ele.descreption.split('.')[0]}... </span>
 
                     </div>
                     <div className="blog-list-item-lede">

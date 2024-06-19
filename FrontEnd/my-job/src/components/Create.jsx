@@ -9,7 +9,7 @@ const Create = (props) => {
     const [email, setEmail] = useState("")
 
     return (
-        <div className="blog-list-item">
+        <div className="blog-list-form">
             <form  className="New-Post-Form">
                 <h1> Create New Job</h1>
                 <input type="text" placeholder="Your Name" value={name}

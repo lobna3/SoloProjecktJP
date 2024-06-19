@@ -10,7 +10,7 @@ const Update = (props) => {
     const [email, setEmail] = useState(props.job.email)
 
     return (
-        <div className="blog-list-item">
+        <div className="blog-list-form">
             <form  className="New-Post-Form">
                 <h1> Update  Job</h1>
                 <input type="text" placeholder="Your Name" value={name}
