@@ -119,7 +119,7 @@ function App() {
           <div className="dropdown">
              Job By Occupation
             <div className="dropdown-content">
-              <p onClick={() => { fetchData() }}>All</p>
+              <p onClick={() => { changeView("allJobs") }}>All</p>
               <p onClick={() => { searchByCategory('It') }}>It</p>
               <p onClick={() => { searchByCategory('management') }}>Manegment</p>
               <p onClick={() => { searchByCategory('call center') }}>Call center</p>
