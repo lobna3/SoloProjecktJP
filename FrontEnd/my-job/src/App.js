@@ -44,6 +44,16 @@ function App() {
     })
   }
 
+  const deleteData = (id) => {
+    axios.delete(`http://127.0.0.1:5000/api/jobs/${id}`).then((response) => {
+      console.log(response.data)
+      setRefetsch(!refetsch)
+      alert("Jobs deleted with succsses")
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+
   useEffect(() => {
     fetchData()
   }, [refetsch])
@@ -56,7 +66,7 @@ function App() {
 
   const renderView = () => {
     if (view === "allJobs") {
-      return <AllList jobs={data} change={changeView}/>
+      return <AllList jobs={data} change={changeView} delete={deleteData}/>
     }
     if (view === "createJob") {
       return <Create add={postData}/>
