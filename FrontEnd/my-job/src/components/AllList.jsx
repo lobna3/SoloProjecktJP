@@ -16,6 +16,8 @@ const AllList = (props) => {
                         <span>{ele.category}</span>
                         <br></br>
                         <span>{ele.city}</span>
+                        <br></br>
+                        <span>{ele.email}</span>
                     </div>
                     <div className="blog-list-item-lede">
                         <button onClick={()=>{props.change("oneJob",ele)}}>More Details</button>

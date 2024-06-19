@@ -4,6 +4,7 @@ import Search from './components/Search.jsx';
 import AllList from './components/AllList.jsx';
 import axios from 'axios';
 import OneJob from './components/OneJob.jsx';
+import Create from './components/Create.jsx';
 
 function App() {
 
@@ -19,7 +20,18 @@ function App() {
     }).catch((error) => {
       console.log(error)
     })
+  } 
+  const postData = (body) => {
+    axios.post('http://127.0.0.1:5000/api/jobs', body).then((response) => {
+      console.log(response.data)
+      setRefetsch(!refetsch)
+      alert("Job add with success")
+      setView("allJobs")
+    }).catch((error) => {
+      console.log(error)
+    })
   }
+
   useEffect(() => {
     fetchData()
   }, [refetsch])
@@ -35,10 +47,13 @@ function App() {
       return <AllList jobs={data} change={changeView}/>
     }
     if (view === "createJob") {
-      return <div><h1>Create New Job</h1></div>
+      return <Create add={postData}/>
     }
     if (view === "oneJob") {
       return <OneJob job={job}/>
+    }
+    if (view === "updateJob") {
+      return <div>update</div>
     }
   }
 

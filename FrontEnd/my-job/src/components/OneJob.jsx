@@ -15,6 +15,8 @@ const OneJob = (props) => {
                 <span>{props.job.category}</span>
                 <br></br>
                 <span>{props.job.city}</span>
+                <br></br>
+                <span>{props.job.email}</span>
             </div>
         </div>
     )
