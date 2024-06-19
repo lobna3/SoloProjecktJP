@@ -117,7 +117,7 @@ function App() {
         </span>
         <span className="items">
           <div className="dropdown">
-            Categories
+             Job By Occupation
             <div className="dropdown-content">
               <p onClick={() => { fetchData() }}>All</p>
               <p onClick={() => { searchByCategory('It') }}>It</p>
