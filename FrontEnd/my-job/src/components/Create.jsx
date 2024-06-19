@@ -19,15 +19,19 @@ const Create = (props) => {
                 <textarea placeholder="Your Description" value={descreption}
                     onChange={(e) => { setDescreption(e.target.value) }}
                 />
+
                 <input type="text" placeholder="Your Category" value={category}
                     onChange={(e) => { setCategory(e.target.value) }}
                 />
+
                 <input type="text" placeholder="Your City" value={city}
                     onChange={(e) => { setCity(e.target.value) }}
                 />
+                
                 <input type="text" placeholder="Your Email" value={email}
                     onChange={(e) => { setEmail(e.target.value) }}
                 />
+
                 <button type="submit" onClick={() => {
                      props.add({
                          name: name,
