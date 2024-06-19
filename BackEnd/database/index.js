@@ -15,7 +15,7 @@ connection.connect().then(() => {
 
 module.exports = {
     getAll: function () {
-        const sql = "select * from `job`"
+        const sql = "select * from `job` ORDER BY id DESC"
         return connection.query(sql)
     },
     add: function (name, descreption, category, city,email) {
