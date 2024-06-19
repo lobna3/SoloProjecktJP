@@ -5,7 +5,7 @@ const AllList = (props) => {
 
     return (
         <div className="all-post">
-            {props.jobs.map((ele,i) =>
+            {props.jobs.map((ele, i) =>
                 <div className="blog-list-item" key={i}>
                     <div className="blog-list-item-title">{ele.name}</div>
                     <div className="blog-list-item-byline">
@@ -18,6 +18,7 @@ const AllList = (props) => {
                         <span>{ele.city}</span>
                     </div>
                     <div className="blog-list-item-lede">
+                        <button onClick={()=>{props.change("oneJob",ele)}}>More Details</button>
                         <button>Update</button>
                         <button>Delete</button>
 

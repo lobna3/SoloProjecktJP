@@ -3,12 +3,14 @@ import './App.css';
 import Search from './components/Search.jsx';
 import AllList from './components/AllList.jsx';
 import axios from 'axios';
+import OneJob from './components/OneJob.jsx';
 
 function App() {
 
   const [view, setView] = useState("allJobs")
   const [data, setData] = useState([])
   const [refetsch, setRefetsch] = useState(false)
+  const [job,setJob]=useState({})
 
   const fetchData = () => {
     axios.get('http://127.0.0.1:5000/api/jobs').then((response) => {
@@ -21,17 +23,22 @@ function App() {
   useEffect(() => {
     fetchData()
   }, [refetsch])
-  
 
-  const changeView = (option) => {
+
+  const changeView = (option,job) => {
     setView(option)
+    setJob(job)
   }
+
   const renderView = () => {
     if (view === "allJobs") {
-      return <AllList jobs={data}/>
+      return <AllList jobs={data} change={changeView}/>
     }
     if (view === "createJob") {
       return <div><h1>Create New Job</h1></div>
+    }
+    if (view === "oneJob") {
+      return <OneJob job={job}/>
     }
   }
 
