@@ -19,7 +19,7 @@ module.exports = {
         return connection.query(sql)
     },
     add: function (name, descreption, category, city,email) {
-        const sql = "insert into `product` (name,descreption,category,city,email) values(?,?,?,?,?)"
+        const sql = "insert into `job` (name,descreption,category,city,email) values(?,?,?,?,?)"
         return connection.query(sql, [name, descreption, category, city, email])
     },
     getById: function (id) {
@@ -35,12 +35,17 @@ module.exports = {
         return connection.query(sql, category)
     },
     deleteP: function (id) {
-        const sql = "delete from `product` where id = ?"
+        const sql = "delete from `job` where id = ?"
         return connection.query(sql, id)
     },
-    update: function (name, descreption, price, category, imageUrl,id) {
-        const sql = "update `product` set name=?,descreption=?,price=?,category=?,imageUrl=? where id=?"
-        return connection.query(sql, [name, descreption, price, category, imageUrl,id])
+    update: function (name, descreption,  category, city,email,id) {
+        const sql = "update `job` set name=?,descreption=?,category=?,city=? , email=? where id=?"
+        return connection.query(sql, [name, descreption,  category, city, email,id])
     },
+
+    getByCity: function (city) {
+        const sql = "select * from `job` where city = ?"
+        return connection.query(sql, city)
+    }
 
 }

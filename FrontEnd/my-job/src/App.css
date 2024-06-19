@@ -1,0 +1,114 @@
+.nav {
+  background-color: #880404;
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+    color: #F3F3F3;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.logo {
+  font-size: 26px;
+  margin-right: auto;
+  margin-left: 10px;
+  color: #f3f3f3;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.logo:hover{
+  cursor: pointer;
+}
+
+.items {
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  margin-right: 0px;
+  font-size: 20px;
+  padding: 6px;
+}
+.items:hover {
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-right: 0px;
+  font-size: 20px;
+  background-color: #d63434;
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 6px;
+ 
+}
+.search {
+    height: 38px;
+    width: 400px;
+    border-radius: 11px;
+    border: transparent;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 1px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.searchForm{
+  margin-right: 5%;
+}
+.searchButton{
+  height: 42px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  width:47px;
+  border: transparent;
+  background-color: black;
+  font-size: 15px;
+}
+.searchButton:hover{
+  height: 42px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  width:47px;
+  cursor: pointer;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content p:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
