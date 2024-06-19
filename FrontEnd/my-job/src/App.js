@@ -54,6 +54,33 @@ function App() {
     })
   }
 
+  const searchByName = (name) => {
+    axios.get(`http://127.0.0.1:5000/api/jobs/name/${name}`).then((response) => {
+      console.log(response.data)
+      setData(response.data)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+
+  const searchByCategory = (category) => {
+    axios.get(`http://127.0.0.1:5000/api/jobs/category/${category}`).then((response) => {
+      console.log(response.data)
+      setData(response.data)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+
+  const searchByCity = (city) => {
+    axios.get(`http://127.0.0.1:5000/api/jobs/city/${city}`).then((response) => {
+      console.log(response.data)
+      setData(response.data)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+
   useEffect(() => {
     fetchData()
   }, [refetsch])
@@ -110,7 +137,7 @@ function App() {
             </div>
           </div>
         </span>
-        <Search/>
+        <Search search={searchByName}/>
         
       </div>
 

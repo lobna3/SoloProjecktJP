@@ -9,7 +9,7 @@ const Search = (props) => {
             onChange={(e)=>{setName(e.target.value)}}
             />
             <button className='searchButton' onClick={()=>{
-              /** props.search(name)*/
+              props.search(name)
             }}>&#x1F50E;</button>
         </div>
     )
