@@ -23,7 +23,7 @@ const AllList = (props) => {
                         <button onClick={()=>{props.change("oneJob",ele)}}>More Details</button>
                         <button onClick={()=>{props.change("updateJob",ele)}}>Update</button>
                         <button onClick={()=>{props.delete(ele.id)}}>Delete</button>
-
+                        <button onClick={()=>{props.addToList(ele)}}>To apply</button>
                     </div>
                 </div>
             )}
