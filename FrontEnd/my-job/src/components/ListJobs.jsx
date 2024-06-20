@@ -9,7 +9,7 @@ const ListJobs = (props) => {
       {props.listJobs.map((ele,i) => {
         return (
           <div className="job-item" key={i}>
-            <span>Product Name: {ele.name}</span>
+            <span>Job Name: {ele.name}</span>
             <span>Category: {ele.category}</span>
             <button onClick={()=>{props.remove(ele.id)}}>Remove</button>
           </div>
